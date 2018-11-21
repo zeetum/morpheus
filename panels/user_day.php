@@ -87,7 +87,7 @@ echo           "</div>";
                // Echo each user
 echo           "<div class='divTableCell'>";
                    if ($value == '') {
-echo               "<form action='../functions/book_timeslot.php' method='POST'>";
+echo               "<form class='book_timeslot' action='../functions/book_timeslot.php' method='POST'>";
 echo                   "<input type='hidden' name='r_id' value='".$timeslot['r_id']."'>";
 echo                   "<input type='hidden' name='category' value='".$_GET['category']."'>";
 echo                   "<input type='hidden' name='column' value='".$key."'>";
@@ -97,7 +97,7 @@ echo                   "<input type='hidden' name='panel' value='user_day'>";
 echo                   "<input class='add_user_button' type='submit' value='Book It!'>";
 echo               "</form>";
                    } else if ($value == $_SESSION['username']) {
-echo               "<form action='../functions/delete_timeslot.php' class='delete_timeslot' method='POST'>";
+echo               "<form class='delete_timeslot' action='../functions/delete_timeslot.php' method='POST'>";
 echo                   "<input type='hidden' name='r_id' value='".$timeslot['r_id']."'>";
 echo                   "<input type='hidden' name='date' value='".$date."'>";
 echo                   "<input type='hidden' name='category' value='".$_GET['category']."'>";

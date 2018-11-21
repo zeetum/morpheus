@@ -54,13 +54,13 @@ echo        "</div>";
 
                // Week view of each category
 echo           "<div class='".$category."_panel accordion_resource'>";
-	       // Select buttons for each week for each resource
-echo           "<form class='accordion_form' action='user_week.php' method='GET'>";
-echo               "<input type='hidden' name='r_id' value='".$r_id."'>";
-echo               "<input type='hidden' name='category' value='".$category."'>";
-echo               "<input type='hidden' name='date' value='".$day."'>";
-echo               "<input class='accordion_form_button' type='submit' value='".$name."'>";
-echo           "</form>";
+	           // Select buttons for each week for each resource
+echo               "<form class='accordion_form' action='user_week.php' method='GET'>";
+echo                   "<input type='hidden' name='r_id' value='".$r_id."'>";
+echo                   "<input type='hidden' name='category' value='".$category."'>";
+echo                   "<input type='hidden' name='date' value='".$day."'>";
+echo                   "<input class='accordion_form_button' type='submit' value='".$name."'>";
+echo               "</form>";
 echo           "</div>";
             }
 echo    "</div>";

@@ -90,7 +90,7 @@ echo                "<div class='divTableCell'>".$day."</div>";
 		    foreach ($timeslots as $key => $value) if (!($key == 'r_id' || $key == 'date')) {
 echo                "<div class='divTableCell'>";
                          if ($value == '') {
-echo                     "<form action='../functions/book_timeslot.php' method='POST'>";
+echo                     "<form class='book_timeslot' action='../functions/book_timeslot.php' method='POST'>";
 echo                         "<input type='hidden' name='r_id' value='".$timeslots['r_id']."'>";
 echo                         "<input type='hidden' name='category' value='".$_GET['category']."'>";
 echo                         "<input type='hidden' name='column' value='".$key."'>";

@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $('form').not('#login_form').submit(function (e) {
+    $('.accordion_form').unbind();
+    $('.accordion_form').submit(function (e) {
         e.preventDefault();
         $.ajax({
             type: $(this).attr('method'),
@@ -12,8 +13,8 @@ $(document).ready(function() {
     });
 });
 $(document).ajaxComplete(function() {
-    $('form').unbind();
-    $('form').submit(function (e) {
+    $('.book_timeslot, .delete_timeslot, .timeslot_taken, .add_user_form').unbind();
+    $('.book_timeslot, .delete_timeslot, .timeslot_taken, .add_user_form').submit(function (e) {
         e.preventDefault();
         $.ajax({
             type: $(this).attr('method'),
