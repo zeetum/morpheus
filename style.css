@@ -1,0 +1,426 @@
+body * {
+    font-family: Helvetica;
+    box-sizing: border-box;
+}
+
+
+form {
+    padding: 0 px;
+    margin: 0 px;
+    height: 39 px;
+}
+form > input[type=submit]{
+	max-height: inherit;
+}
+
+input[type=submit], button {
+    height: 35px;
+}
+#login_heading {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 175px);
+}
+#login_panel {
+    width: 350px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 175px);
+}
+#login_background {
+   position: absolute;
+   top: 0;
+   width: 30%;
+   height: 100px;
+   background-color: #BB1D1A;
+}
+#login_form {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30%;
+    height: 100%;
+}
+#login_form input[type=text], input[type=password] { 
+    top: 0;
+    width: 220px;
+    height: 30px;
+}
+#login_form input[type=submit] { 
+    position: absolute;
+    left: 240px;
+    top: 0;
+    height: 60px;
+    width: 60px;
+}
+
+#main_panel {
+	position: absolute;
+	left: 300px;
+	top: 120px;
+	width: 70%;
+}
+.nav_bar {
+    min-width: 1000px;
+    width: 100%;
+    font-weight: bold;
+    background-color: #BB1D1A;
+    overflow: hidden;
+}
+.nav_bar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav_bar a:hover {
+    background-color: black;
+    color: white;
+}
+.nav_bar a.active {
+    background-color: black;
+    color: white;
+}
+.nav_bar #home_button {
+    width: 250px;
+}
+
+#nav_links {
+    width: 100%;
+    height: 30px;
+}
+
+.category_button {
+    width: 100%;
+    float: right;
+
+    margin: 0;
+    padding: 0;
+}
+
+.category_form {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.accordion{
+    position: absolute;
+   display: block;
+   width: 250px;
+   height: 100%;
+   background-color: #BB1D1A;
+}
+
+.accordion_button {
+    width: 250px;
+
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.accordion_resource{
+    display: none;
+    width: 250px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.accordion_form {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+.accordion_form_button {
+    width: 200px;
+    float: right;
+
+    margin: 0;
+    padding: 0;
+    
+}
+#admin_link {
+	text-align: center;
+}
+
+#logout_link {
+	float: right;
+}
+
+#categories_link {
+	float: left;
+}
+
+.buttonWrapper {
+	max-width: 560px;
+	margin: 0 auto;
+}
+
+.time_button:first-of-type {
+	text-align: left;
+}
+
+.time_button {
+	width: 50%;
+	float: left;
+	left: 20%;
+	padding-bottom: 20px;
+	text-align: right;
+	display: block;
+}
+
+.divTable {
+    position: absolute;
+    left: 0px;
+    margin: 20px auto 0;
+    min-width: 660px;
+    text-align: center;
+    font-family: Helvetica;
+    width: 100%;
+}
+ 
+.day_column_date {
+    font-size: 12px;
+    font-weight: bold;
+}
+.divTableColumnWrapper {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.divTableCell, .divTableHead {
+	position: relative;
+	padding: 1px;
+	height: 35px;
+	width: 100%;
+	display: block;
+}
+.divTableColumn {
+	position: relative;
+	display: block;
+	float: left;
+	width: 15%;
+	text-align: center;
+	vertical-align: middle;
+        line-height: 39px;
+	word-wrap:break-word;
+	min-width: 6em;
+}
+.divTableColumn:first-of-type {
+	left: 0px;
+	padding-right: 10px;
+	text-align: right;
+	width: 10%;
+	min-width: 100px;
+}
+
+.resource_button {
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	line-height: 15px;
+	height: 35px;
+}
+.divTableColumn > input[type=submit]:not(.resource_button) { 
+    border: 1px solid #fff;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 35px;
+    background: #08c;
+    color: #fff;
+    font-size: 12px;
+    font-family: Helvetica;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.divTableColumn > input[type=submit]:hover:not(.resource_button){
+    background:blue;
+}
+.delete_timeslot > input[type=submit]:not(.resource_button) {
+    position: absolute;
+    border: 1px solid #fff;
+    margin: 0 auto;
+    display: block;
+    top: 1px;
+    left: 0px;
+    line-height: 17px;
+    white-space: normal;
+    background: green;
+}
+.delete_timeslot input[type=submit]:hover:not(.resource_button) {
+    background: darkgreen;
+}
+.book_user_popup {
+	position: absolute;
+    height: 30px;
+    background: white;
+    left: 0px;
+    top: 0px;
+}
+.timeslot_taken, .timeslot_taken input[type=submit] {
+    white-space: pre-line;
+    position: absolute;
+    border: 1px solid #fff;
+    margin: 0 auto;
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    font-size: 12px;
+    font-family: Helvetica;
+    font-weight: 200;
+    background: red;
+    line-height: 16px;
+    overflow-y: auto;
+}
+.timeslot_taken:hover input[type=submit] {
+    background: darkred;
+}
+
+.add_user_button {
+    border: 1px solid #fff;
+    background: #08c;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 35px;
+    line-height: 39px;
+    background: #08c;
+    color: #fff;
+    font-size: 12px;
+    font-family: Helvetica;
+    font-weight: 200;
+}
+
+.add_user_button:hover {
+	background: blue;
+}
+.add_user_panel {
+	background: white;
+}
+.add_user_popup{
+	position: relative;
+	box-shadow: 5px 5px;
+	padding: 5px;
+	border: 1px solid black;
+	z-index:1000;
+	display: none;
+	height: 146px;
+	width: 310px;
+	top: 0px;
+	left: 0px;
+	background: white;
+}
+.add_user_form_labels {
+	position: relative;
+	width: 100px;
+	float: left;
+	padding: 0px;
+	top: 2px;
+}
+.add_user_form_labels div { 
+	display: block;
+	padding-bottom: 30px;
+	margin: 0px;
+	height: 20px;
+	width: 100%;
+	float: left;
+	text-align: right;
+}
+.add_user_form {
+	position: absolute;
+	float: left;
+	top: 0;
+	left: 110px;
+	width: 190px;
+}
+.add_user_form input[type=checkbox]{
+	position: absolute;
+	padding: 0px;
+	left: 0px;
+	top: 38px;
+	height: 30px;
+	width: 30px;
+}
+.add_user_form select {
+	position: absolute;
+	left: 36px;
+	top: 40px;
+	height: 30px;
+	width: 146px;
+}
+.add_user_form input[type=text] {
+	position: absolute;
+	left: 2px;
+	top: 5px;
+	height: 30px;
+	width: 146px;
+}
+.add_user_form input[type=date] {
+	position: absolute;
+	left: 2px;
+	top: 73px;
+	width: 90px;
+}
+.add_user_form input[type=date] + input[type=date] {
+	left: 92px;
+}
+.add_user_form input[type=submit] {
+	position: absolute;
+	left: 2px;
+	top: 102px;
+	height: 30px;
+	width: 180px;
+}
+.close_user_popup {
+	padding: 0px;
+	position: absolute;
+	top: 5px;
+        left: 263px;
+	height: 30px;
+	width: 30px;
+	float: right;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.delete_recurring {
+	position: relative;
+}
+.delete_recurring input {
+	position: absolute;
+	display: block;
+	height: 30px;
+	left: 110px;
+}
+.delete_recurring label {
+	display: block;
+	height: 30px;
+	width: 100px;
+	text-align: right;
+	line-height: 30px;
+}
+
+
