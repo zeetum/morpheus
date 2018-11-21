@@ -40,8 +40,8 @@ if (count($timeslots) == 0) {
 ?>
     <div class="divTable">
 	<div class='divTableBody'>
-            <h3><?PHP echo date('d-m', strtotime($day)); ?></h3>
-            <h1><?PHP echo date('l', strtotime($day)); ?></h1>
+            <h3><?PHP echo date('d-m', strtotime($date)); ?></h3>
+            <h1><?PHP echo date('l', strtotime($date)); ?></h1>
 <?PHP
 echo        "<div class='buttonWrapper'>";
 echo        "<form class=time_button action='user_day.php' method='get'>";
