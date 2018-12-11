@@ -30,6 +30,7 @@ $timeslots = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // If there are no timeslots, generate a new week and re-query
 if (count($timeslots) == 0) {
     $exec_string = "php ".$_SERVER['DOCUMENT_ROOT'].'/morpheus/functions/new_week.php '.$_GET['date'];
+    exec($exec_string);
     $stmt = $conn->prepare("SELECT * FROM ".$_GET['category']." WHERE date = :date");
     $stmt->execute(array(
         ":date" => $date,
